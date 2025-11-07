@@ -1,13 +1,13 @@
 import './App.css'
-import AnimatedWave from './components/lightswind/animated-wave'
-import SparkleNavbar from './components/lightswind/sparkle-navbar'
+import { SparkleParticles } from './components/lightswind/sparkle-particles'
+// import { NavbarDark } from './components/NavbarDark'
 
 function App() {
   return (
     <div className="relative bg-gray-900 rounded-lg overflow-hidden h-screen">
-      <AnimatedWave className="absolute inset-0 z-0"/>
+      <SparkleParticles className="absolute inset-0 z-0" particleColor='#ffffff' enableHoverGrab={true} enableParallax={true} enableCollisions={true} />
       <div className="relative z-10 flex flex-col items-center w-full">
-        <SparkleNavbar items={["Redux Notifications" , "Bel"]} />
+        {/* <NavbarDark /> */}
 
       </div>
     </div>
