@@ -21,12 +21,12 @@ const Navbar = () => {
                 <li>
                     <a
                         href="#"
-                        className="block px-4.5 py-2 shadow-lg 
+                        className="relative px-4.5 py-2 shadow-lg 
                                 rounded-full"
                         aria-label="View notifications"
                     >
                         <BellRingIcon className="h-6 w-6" />
-                        <span className="absolute size-4 right-[-1] top-[-18] text-white
+                        <span className="absolute size-4 right-0 top-[-3] text-white
                                 bg-white/10 backdrop-blur-md shadow-lg 
                                 rounded-full text-[10px] text-center">{unreadNotifications}</span>
                     </a>
