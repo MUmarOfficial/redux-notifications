@@ -1,9 +1,10 @@
-import { BellRingIcon } from "./ui/BellRingIcon";
+import { useAppSelector } from "@/store/hooks";
+import { BellRingIcon } from "../ui/BellRingIcon";
+import { selectUnreadNotificationsCount } from "@/store/notificationsSlice";
 
 const Navbar = () => {
-    return <>
-
-        <nav className="w-xl mx-auto my-2 px-8 py-4 sticky top-0 z-50 bg-transparent backdrop-blur-md shadow-lg rounded-full">
+    const unreadNotifications = useAppSelector(selectUnreadNotificationsCount);
+    return <nav className="w-full my-2 px-12 py-4 sticky top-0 z-50 bg-transparent backdrop-blur-sm shadow-lg rounded-full">
             <ul className="flex items-center justify-between">
                 <li>
                     <a
@@ -27,12 +28,11 @@ const Navbar = () => {
                         <BellRingIcon className="h-6 w-6" />
                         <span className="absolute size-4 right-[-1] top-[-18] text-white
                                 bg-white/10 backdrop-blur-md shadow-lg 
-                                rounded-full text-[10px] text-center">1</span>
+                                rounded-full text-[10px] text-center">{unreadNotifications}</span>
                     </a>
                 </li>
             </ul>
         </nav>
-    </>
-}
+};
 
 export default Navbar;
