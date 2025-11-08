@@ -43,7 +43,7 @@ export function SparkleParticles({
   particleColor,
   enableParallax = false,
   enableHoverGrab = false,
-  backgroundColor = "transparent",
+  backgroundColor = "#0E1217",
   userOptions = {},
   zIndexLevel = 1,
   clickEffect = true,
