@@ -5,7 +5,7 @@ import { selectUnreadNotificationsCount } from "@/store/notificationsSlice";
 const Navbar = () => {
     const unreadNotifications = useAppSelector(selectUnreadNotificationsCount);
     return <nav className="w-full my-2 px-12 py-4 sticky top-0 z-50 bg-transparent backdrop-blur-sm shadow-lg rounded-full">
-            <ul className="flex items-center justify-between">
+            <ul className="flex items-center justify-between relative">
                 <li>
                     <a
                         href="#"
@@ -18,7 +18,7 @@ const Navbar = () => {
                         </span>
                     </a>
                 </li>
-                <li>
+            <li className="relative">
                     <a
                         href="#"
                         className="relative px-4.5 py-2 shadow-lg 
